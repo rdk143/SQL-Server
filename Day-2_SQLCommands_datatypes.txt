@@ -1,0 +1,62 @@
+SQL Server
+
+Microsoft SQL server is a relational database management system.
+Supports the structured query language and comes with there own implementation of the SQL language which is the transat-sql (T- SQL)
+It has an integrated environment to handle SQL database, which is the SQL server management studio.
+
+----------------------------------------------------------------
+Key Concepts of SQL Server
+
+Database Engine --> this component is used to handles storage, rapid transactions, processing and securing the data.
+SQL Server --> this service is used to start, stop, pause and continue the instance of microsoft sql server.
+SQL server Agent --> SQL server agent plays a role of task Scheduler, by any event as per the requirement.
+SQL Server Browser --> The component is used to connect incomming request to desired sql server instance.
+SQL server Full-Text Search --> This is used for user to run full text queries.
+SQL Server VSS Writer --> This service allows backups and restoration of data files, when sql server doesn't run.
+SQL Server Analysis Services(SSAS) --> This service is used to provide analysis of data-mining and machine learning concepts.
+SQL server is also integrated with python and R for advanced data analytics.
+SQL Server Reporting Services(SSRS) --> This servics os used to provide features and decisionmaking capabilities for integration with hadoop. 
+SQL Server Integration Services(SSIS) -->This service is used to provide ETL operations for different types of data from multiple sources.
+----------------------------------------------------------------
+ER-Model
+ER model stands for an Entity-Relationship model.Pictorial representation of a database. which is used to design a database.
+
+----------------------------------------------------------------
+SQL Server Data types
+Exact numeric: bit, tinyint, smallint, int, bigint, decimal, numeric, money and smallmoney
+Approximate numeric: Read and float
+Date and time: date, DateTime, datetime2, datetimeoffset, smalldatetime, time
+Character strings:char, varchar, text
+Unicode character strings: Nchar, Nvarchar, Ntext
+Binary strings: Binary, image and varbinary
+Other data types: Cursor, hierarchyid, sql_variant, table, rowversion, uniqueidentifier, XML, Spatial and geography
+----------------------------------------------------------------
+
+SQL Command Categories
+
+DDL- Data Definition Language
+
+Changes the structure of the table like creating a table, deleting a table, altering a table, etc. DDL commands are auto committed.
+Commands: CREATE, ALTER, DROP, TRUNCATE.
+
+DML-Data Manipulation Language
+
+They are used to manipulate the data in the database.These commands are not auto committed.
+commands : INSERT, UPDATE, DELETE
+
+DCL-Data Control Language
+These commands are used to grant and take back authority from any database user.
+Commands: Grant, Revoke.
+
+TCL-Transaction Control Language
+TCL commands can only use with DML commands like INSERT, DELETE and UPDATE only.
+Commands: COMMIT, ROLLBACK, SAVEPOINT
+
+DQL-Data Query Language
+DQL is used to fetch the data from the database.
+Command: SELECT
+
+
+
+
+

@@ -1,0 +1,158 @@
+Database 
+
+A database is an organized collection of data, so that it can be easily accessed and managed.
+We can organize data into tables, rows, columns, and index so that, it makes easier to find relevant information.
+The main purpose of the database is to operate a large amount of information by storing, retrieving, and managing data.
+
+Database objects:
+It is defined as an object in a database, that is used to store data. Any object which is created by create command is known as Database Object.
+Eg: Table, View, Sequence etc..
+
+Schema
+
+A schema is a collection of database objects including tables, views, triggers, stored procedures, indexes, etc. 
+A schema is associated with a username which is known as the schema owner, Here database username username will consider as schema user name.
+A schema always belongs to one particular database. On the other hand, a database may have one or multiple schemas. 
+
+Built in Schema
+
+SQL Server provides us with some pre-defined schemas:  dbo, guest, sys, and INFORMATION_SCHEMA.
+Schemas:  sys and INFORMATION_SCHEMA used only for for system objects,  so we don’t have permission to create or drop any objects.
+
+To access the table from schema: Schema.tablename
+Example:  dbo.abc and guest.abc
+
+Syntax for Creating customize schema.
+CREATE SCHEMA schema_name; 
+GO
+
+Example
+Create a sample DB: BikeStores, having 2 schemas i:e sales and hr and create tables in each schema with name : employees
+
+CREATE SCHEMA sales ;  
+GO
+CREATE TABLE Sales.employee 
+(Employee_id int NOT NULL,  
+Employee_Name char(5) NOT NULL)  ;
+
+-------------------------------------------
+
+DDL- Data Definition Language
+
+It consists of the SQL commands that are used to create and modify the structure of a database and database objects.
+
+Commands: Create, Drop, Alter, Truncate,  Rename.
+
+CREATE
+
+To create a database and its objects like table, views, triggers, stored procedures. 
+
+Syntax for creating DB:  CREATE DATABASE <Db name>;
+Eg:  CREATE DATABASE STUDENT;
+
+Syntax for creatingTable: 
+CREATE TABLE table_name (    column1 datatype,    column2 datatype,    column3 datatype,   ....);
+Eg: 
+CREATE TABLE StudentInfo
+(
+StudentID  int,
+StudentName  varchar(8000),
+ParentName  varchar(8000),
+PhoneNumber  bigint,
+Place  varchar(8000),
+);
+-----------------
+TRUNCATE
+
+The TRUNCATE command deletes the data inside a table, but not the structure of the table. 
+
+For that we need to insert data in to table : StudentInfo
+SYNTAX to insert data: 
+
+INSERT INTO StudentInfo (StudentID, StudentName, ParentName,Contact,Address) VALUES ('1', 'Vishnu', 'Abhi','7765656565', 'HYD');
+INSERT INTO StudentInfo (StudentID, StudentName, ParentName,Contact,Address) VALUES ('2', 'Ajay', 'Ramamurthi','7765656565', 'HYD');
+
+select * from StudentInfo
+
+Syntax for TRUNCATE
+
+Syntax: TRUNCATE TABLE <tb name>;
+Eg: TRUNCATE TABLE StudentInfo;
+
+select * from StudentInfo; 
+
+no data will present
+------------------------
+
+This command helps to delete objects. i:e (Table or Database). 
+
+Syntax for deleting Table
+DROP TABLE <table name>
+Eg: DROP TABLE StudentInfo;
+
+Syntax for deleting Database
+DROP DATABASE <db name>
+Eg: DROP DATABASE STUDENT;
+
+---------------------------
+diffreence between DROP and TRUNCATE
+
+DROP: This SQL command removes a table/database structure from the database.	
+TRUNCATE: TRUNCATE command deletes the data inside a table, but not the structure of the table. 
+---------------------
+
+SQL COMMANDS that we discussed in class
+---------------------
+CREATE DATABASE STUDENT; // to create DATABASE of name STUDENT
+USE STUDENT; // to create TABLE into the STUDENT DB, first we need to use that DB
+
+CREATE TABLE StudentInfo // Creating table of name StudentInfo 
+(
+StudentID int,
+StudentName varchar(8000),
+ParentName varchar(8000),
+Contact bigint,
+Address Varchar(8000)
+);
+
+select * from StudentInfo; // for retriving data
+ALTER TABLE StudentInfo ADD Place varchar(8000); // syntax for adding new column Place  in table StudentInfo 
+ALTER TABLE StudentInfo drop COLUMN Place; // drop place column
+
+ALTER TABLE StudentInfo ADD DOB datetime; // adding DOB column to table StudentInfo with datatype: datetime
+ALTER TABLE StudentInfo ALTER COLUMN DOB date; // changing datatype from datetime to date for coloum DOB
+
+INSERT INTO StudentInfo (StudentID, StudentName, ParentName,Contact,Address) VALUES ('1', 'Vishnu', 'Abhi','7765656565', 'HYD');
+INSERT INTO StudentInfo (StudentID, StudentName, ParentName,Contact,Address) VALUES ('2', 'Ajay', 'Ramamurthi','7765656565', 'HYD');
+
+TRUNCATE TABLE StudentInfo; //deleting all coloums from table StudentInfo; 
+
+DROP TABLE StudentInfo; //droping table StudentInfo; 
+select * from StudentInfo; 
+
+DROP DATABASE sample; //droping database sample; 
+------------------------------------
+Schema related queries
+
+CREATE TABLE dbo.sample1 // creating a table in the default schema
+(
+StudentID int,
+StudentName varchar(8000),
+);
+
+select * from sales.sample1; 
+
+CREATE SCHEMA sales // creating a custom defind schema and add a table: sample1 into that schema
+GO
+CREATE TABLE sales.sample1
+(
+StudentID int,
+StudentName varchar(8000),
+);
+
+
+
+
+
+
+

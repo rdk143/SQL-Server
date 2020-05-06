@@ -1,0 +1,38 @@
+Client: 
+
+1) Client is a program that runs in local machine.
+2) Front end page i:e html page which is accessable to end user is know as Client.
+3) client and server communicate with each other over a network. 
+4) In client/server computing, a server takes requests from client and processes it and sends that request to the database.
+
+Server: 
+
+A server is a program that runs on the remote machine providing services to the clients.
+When the server gets the request, it will process and sends the response to client.
+A server is a machine or computer program that provides data or functionality for other machines or programs.
+
+DBMS- Database Management System
+
+DBMS is a software that is used to creating and manage the database.
+Stores data in such a way that it becomes easier to retrieve, manipulate, and produce information.
+It can also be described as a software package designed to define, manipulate, retrieve and manage data in a database. It also defines rules to validate and manipulate this data.
+
+Data: 
+
+Data is a collection of a distinct small unit of information. It can be in different forms like text, numbers, media, bytes, etc. 
+It can be stored either in pieces of paper or electronic memory, etc.
+
+Database: 
+
+A database is an organized collection of data, so that it can be easily accessed and managed.
+we can organize data into tables, rows, columns, and index it to make it easier to find relevant information.
+The main purpose of the database is to operate a large amount of information by storing, retrieving, and managing data.
+
+SQL server
+
+SQL Server is a relational database technology developed by Microsoft.
+
+What is SQL?
+
+SQL represents structured query language, which is used in  It is designed to access and manipulate information in a database.
+
