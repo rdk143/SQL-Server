@@ -5,8 +5,8 @@ We can organize data into tables, rows, columns, and index so that, it makes eas
 The main purpose of the database is to operate a large amount of information by storing, retrieving, and managing data.
 
 Database objects:
-It is defined as an object in a database, that is used to store data. Any object which is created by create command is known as Database Object.
-Eg: Table, View, Sequence etc..
+It is defined as an object in a database, that is used to store data. Any object which is created byÂ create commandÂ is known as Database Object.
+Eg: Table, View, SequenceÂ etc..
 
 Schema
 
@@ -17,7 +17,7 @@ A schema always belongs to one particular database. On the other hand, a databas
 Built in Schema
 
 SQL Server provides us with some pre-defined schemas:  dbo, guest, sys, and INFORMATION_SCHEMA.
-Schemas:  sys and INFORMATION_SCHEMA used only for for system objects,  so we don’t have permission to create or drop any objects.
+Schemas: Â sysÂ andÂ INFORMATION_SCHEMA used only for for system objects,  so we donâ€™t have permission to create or drop any objects.
 
 To access the table from schema: Schema.tablename
 Example:  dbo.abc and guest.abc
@@ -37,7 +37,7 @@ Employee_Name char(5) NOT NULL)  ;
 
 -------------------------------------------
 
-DDL- Data Definition Language
+DDL-Â Data Definition Language
 
 It consists of the SQL commands that are used to create and modify the structure of a database and database objects.
 
@@ -51,7 +51,7 @@ Syntax for creating DB:  CREATE DATABASE <Db name>;
 Eg:  CREATE DATABASE STUDENT;
 
 Syntax for creatingTable: 
-CREATE TABLE table_name (    column1 datatype,    column2 datatype,    column3 datatype,   ....);
+CREATEÂ TABLEÂ table_nameÂ (Â Â Â  column1 datatype,Â Â Â  column2 datatype,Â Â Â  column3 datatype,Â Â  ....);
 Eg: 
 CREATE TABLE StudentInfo
 (
@@ -64,7 +64,7 @@ Place  varchar(8000),
 -----------------
 TRUNCATE
 
-The TRUNCATE command deletes the data inside a table, but not the structure of the table. 
+TheÂ TRUNCATE command deletes the data inside a table, but not the structure of the table. 
 
 For that we need to insert data in to table : StudentInfo
 SYNTAX to insert data: 
